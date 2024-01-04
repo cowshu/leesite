@@ -13,13 +13,13 @@ body, html {
     border: 1px solid white;
     padding: 20px; /* Adjust padding as needed */
   }
-  a {
+  a {/* these a css thingies set the hyperlinks to not use purple or blue coloring*/
     color: white;
   }
   
   a:visited { /* these a css thingies set the hyperlinks to not use purple or blue coloring*/
     color:white;
   }
-  a:hover {
+  a:hover {/*this sets the hover color for hyperlinks bc why not?*/
     color:lightgray;
   }

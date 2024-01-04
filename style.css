@@ -29,8 +29,8 @@ body, html {
   a:hover {/*this sets the hover color for hyperlinks bc why not?*/
     color:lightgray;
   }
-/*below this is just random tinkering*/
-  @media screen and (max-width:768px) {
+/*mobile shit*/
+@media only screen and (width > height) {
       .centered-content {
         padding: 13px;
         height:60%;

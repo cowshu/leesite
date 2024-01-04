@@ -32,12 +32,11 @@ body, html {
 /*mobile shit*/
 @media only screen and (width > height) {
       .centered-content {
-        padding: 13px;
-        scale:50%;
-        height:60%;
+        
+      }
       }
       body {
-        scale:50%;
+        
       }
     }
 

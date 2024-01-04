@@ -23,9 +23,3 @@ body, html {
   a:hover {
     color:lightgray;
   }
-  
-  @media screen and (max-width: 768px) {
-    body {
-      font-size:10px; /* decreases font size for mobile users */
-    }
-  }

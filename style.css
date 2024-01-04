@@ -4,9 +4,11 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:black;
+    color:white;
   }
   
   .centered-content {
-    border: 2px solid purple;
+    border: 1px solid white;
     padding: 20px; /* Adjust padding as needed */
   }

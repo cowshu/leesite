@@ -29,12 +29,12 @@ body, html {
     color:lightgray;
   }
 /*mobile shit*/
-@media only screen and (width > height) {
+@media only screen and (width < height) {
       .centered-content {
       }
       }
       body {
-        font-size:12px;
+        font-size:60%;
       }
     }
 

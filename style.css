@@ -8,15 +8,14 @@ body, html {
     background-image:url(bkg.png);
     color:white;
     font-family: 'JetBrains Mono', monospace;
-    line-height:1.5 ;
+    line-height:1.9 ;
   }
   
   .centered-content /*this contains the border stuff*/ {
     border: 1px solid white;
     padding: 20px; 
-    width:50%;
+    width:70%;
     background-color:black;
-    width:var(screen);
   }
 
   a {/* these a css thingies set the hyperlinks to not use purple or blue coloring*/
@@ -30,15 +29,14 @@ body, html {
     color:lightgray;
   }
 /*mobile shit*/
-/*@media only screen and (width > height) {
+@media only screen and (width > height) {
       .centered-content {
-        
       }
       }
       body {
-        
+        font-size:12px;
       }
-    }*/
+    }
 
     
 

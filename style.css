@@ -1,7 +1,12 @@
 body, html {
+    height: 100%;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid purple;
+  }
+  
+  .centered-content {
+    border: 2px solid purple;
+    padding: 20px; /* Adjust padding as needed */
   }

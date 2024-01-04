@@ -1,20 +1,24 @@
 body, html {
-    height: 100%;
+    height: 100%; /*positions our box thing*/
+    width:100%;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:black;
+    background-image:url(bkg.png);
     color:white;
     font-family: 'JetBrains Mono', monospace;
+    line-height:1.5 ;
   }
   
-  .centered-content {
+  .centered-content /*this contains the border stuff*/ {
     border: 1px solid white;
-    padding: 20px; /* Adjust padding as needed */
-    max-width:90%;
-    box-sizing: border-box;
+    padding: 20px; 
+    width:50%;
+    background-color:black;
+    width:var(screen);
   }
+
   a {/* these a css thingies set the hyperlinks to not use purple or blue coloring*/
     color: white;
   }
@@ -25,7 +29,14 @@ body, html {
   a:hover {/*this sets the hover color for hyperlinks bc why not?*/
     color:lightgray;
   }
+/*below this is just random tinkering*/
+  @media screen and (max-width:768px) {
+      .centered-content {
+        padding: 13px;
+        width:unset;
+      }
+    }
 
-  /*@media screen and (max-width:768px) {
-    this detectes phone size :3
-    }*/
+    
+
+

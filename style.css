@@ -29,8 +29,14 @@ body, html {
     color:lightgray;
   }
 /*mobile shit*/
-@media only screen and (width > height) {
-    }
+@media screen and (orientation:portrait) {
+      .centered-content {
+        
+      }
+      body {
+        font-size:80%;
+      }
+}
 
     
 

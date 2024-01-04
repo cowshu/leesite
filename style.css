@@ -12,6 +12,7 @@ body, html {
   .centered-content {
     border: 1px solid white;
     padding: 20px; /* Adjust padding as needed */
+    max-width:90%;
   }
   a {/* these a css thingies set the hyperlinks to not use purple or blue coloring*/
     color: white;
@@ -23,3 +24,7 @@ body, html {
   a:hover {/*this sets the hover color for hyperlinks bc why not?*/
     color:lightgray;
   }
+
+  /*@media screen and (max-width:768px) {
+    this detectes phone size :3
+    }*/

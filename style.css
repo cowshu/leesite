@@ -19,9 +19,6 @@ body, html {
   }
 
   @media screen and (orientation:portrait) { /*mobile detector*/
-    .centered-content {
-      width:95%;
-    }
     body {
       font-size:80%;
     }

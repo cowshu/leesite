@@ -31,7 +31,7 @@ body, html {
 /*mobile shit*/
 @media screen and (orientation:portrait) {
       .centered-content {
-        
+        width:95%;
       }
       body {
         font-size:80%;

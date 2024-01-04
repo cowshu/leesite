@@ -13,3 +13,13 @@ body, html {
     border: 1px solid white;
     padding: 20px; /* Adjust padding as needed */
   }
+  a {
+    color: white;
+  }
+  
+  a:visited {
+    color:white;
+  }
+  a:hover {
+    color:lightgray;
+  }

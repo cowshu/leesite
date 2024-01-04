@@ -6,6 +6,7 @@ body, html {
     align-items: center;
     background-color:black;
     color:white;
+    font-family: 'JetBrains Mono', monospace;
   }
   
   .centered-content {

@@ -33,8 +33,11 @@ body, html {
 @media only screen and (width > height) {
       .centered-content {
         padding: 13px;
+        scale:50%;
         height:60%;
-        font-size:smaller;
+      }
+      body {
+        scale:50%;
       }
     }
 

@@ -13,6 +13,7 @@ body, html {
     border: 1px solid white;
     padding: 20px; /* Adjust padding as needed */
     max-width:90%;
+    box-sizing: border-box;
   }
   a {/* these a css thingies set the hyperlinks to not use purple or blue coloring*/
     color: white;

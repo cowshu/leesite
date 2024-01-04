@@ -17,7 +17,7 @@ body, html {
     color: white;
   }
   
-  a:visited {
+  a:visited { /* these a css thingies set the hyperlinks to not use purple or blue coloring*/
     color:white;
   }
   a:hover {

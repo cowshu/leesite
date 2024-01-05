@@ -18,7 +18,7 @@ body, html {
     background-color:black;
   }
 
-  @media screen and (orientation:portrait) { /*mobile detector*/
+  @media only screen and (max-device-width: 480px) { /*mobile detector*/
     body {
       font-size:80%;
     }
@@ -34,7 +34,7 @@ body, html {
   a:hover {/*this sets the hover color for hyperlinks bc why not?*/
     color:lightgray;
   }
-/*mobile shit*/
+
 
 
     

@@ -18,12 +18,9 @@ body, html {
     background-color:black;
   }
 
-  @media (-webkit-min-device-pixel-ratio: 2),   /* Webkit-based browsers */
-        (min--moz-device-pixel-ratio: 2),      /* Older Firefox browsers (prior to Firefox 16) */
-        (min-resolution: 2dppx),               /* The standard way */
-        (min-resolution: 192dpi) { /*mobile detector*/
+  @media only screen and (max-width:768px) { /*mobile detector*/
     body {
-      font-size:200%;
+      font-size:80%;
     }
 }
 

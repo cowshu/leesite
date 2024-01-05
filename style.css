@@ -26,14 +26,17 @@ body, html {
 
   a {/* these a css thingies set the hyperlinks to not use purple or blue coloring*/
     color: white;
+    text-decoration: none;
   }
   
   a:visited { /* these a css thingies set the hyperlinks to not use purple or blue coloring*/
-    color:white;
-  }
+   /* color:white; */
+    font-style: none; }
   a:hover {/*this sets the hover color for hyperlinks bc why not?*/
     color:lightgray;
   }
+
+
 
 
 

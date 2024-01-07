@@ -16,6 +16,7 @@ body, html {
     padding: 20px; 
     width:70%;
     background-color:black;
+    display:flex;
   }
 
   @media screen and (orientation:portrait) { /*mobile detector:mid edition. ONLY using orientation rn*/

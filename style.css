@@ -9,6 +9,7 @@ body, html {
     color:white;
     font-family: 'JetBrains Mono', monospace;
     line-height:1.9 ;
+    flex-direction:column;
   }
   
   .centered-content /*this contains the border stuff*/ {
@@ -17,6 +18,7 @@ body, html {
     width:70%;
     background-color:black;
     display:flex;
+    margin-bottom:10px;
   }
 
   @media screen and (orientation:portrait) { /*mobile detector:mid edition. ONLY using orientation rn*/

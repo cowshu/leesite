@@ -11,6 +11,10 @@ body, html {
     line-height:1.9 ;
     flex-direction:column;
   }
+  @font-face {
+  font-family: 'JetBrainsMonoNerd'; /* Provide a name for your font */
+  src: url('/JetBrainsMonoNerd.ttf') format('truetype'); /* Specify the path to your font file */
+}
   
   .centered-content /*this contains the border stuff*/ {
     border: 1px solid white;
@@ -18,7 +22,8 @@ body, html {
     width:70%;
     background-color:black;
     display:flex;
-    margin-bottom:10px;
+    flex-direction:column;
+    align-content:;
   }
 
   @media screen and (orientation:portrait) { /*mobile detector:mid edition. ONLY using orientation rn*/

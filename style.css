@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'JetBrainsMonoNerd'; /* Provide a name for your font */
+  src: url('JetBrainsMonoNerdFont-Medium.ttf') format('truetype'); /* Specify the path to your font file */
+} /*defines font as nerd, supposedly*/
+
 body, html {
     height: 100%; /*positions our box thing*/
     width:100%;
@@ -7,14 +12,10 @@ body, html {
     align-items: center;
     background-image:url(bkg.png);
     color:white;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrainsMonoNerd', monospace;
     line-height:1.9 ;
     flex-direction:column;
   }
-  @font-face {
-  font-family: 'JetBrainsMonoNerd'; /* Provide a name for your font */
-  src: url('JetBrainsMonoNerdFont-Medium.ttf') format('truetype'); /* Specify the path to your font file */
-}
   
   .centered-content /*this contains the border stuff*/ {
     border: 1px solid white;

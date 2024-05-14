@@ -5,7 +5,7 @@
 }
 body, html {
     height: 100%; /*positions our box thing*/
-    width:80%;
+    width:100%;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -20,9 +20,9 @@ body, html {
   .centered-content /*this contains the border stuff*/ {
     border: 1px solid white;
     padding: 20px; 
-    width:70%;
     background-color:black;
     display:flex;
+    width:80%;
     flex-direction:column;
   }
   @media screen and (orientation:portrait) { /*mobile detector:mid edition. ONLY using orientation rn*/

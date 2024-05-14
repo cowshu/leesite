@@ -1,17 +1,20 @@
 
-
+@font-face {
+  font-family: 'JetBrains Mono Nerd';
+  src: url('JetBrainsMonoNerdFont-Medium.ttf');
+}
 body, html {
     height: 100%; /*positions our box thing*/
-    width:100%;
+    width:80%;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image:url(bkg.png);
     color:white;
-    font-family: 'JetBrains Mono', monospace;
     line-height:1.9 ;
     flex-direction:column;
+    font-family:'JetBrains Mono Nerd';
   }
   
   .centered-content /*this contains the border stuff*/ {
@@ -21,9 +24,7 @@ body, html {
     background-color:black;
     display:flex;
     flex-direction:column;
-    align-content:;
   }
-
   @media screen and (orientation:portrait) { /*mobile detector:mid edition. ONLY using orientation rn*/
     body {
       font-size:110%;

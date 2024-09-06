@@ -4,30 +4,31 @@
   src: url('JetBrainsMonoNerdFont-Medium.ttf');
 }
 body, html {
+    margin-top: 5px;
     height: 100%; /*positions our box thing*/
-    width:100%;
-    margin: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    position:relative;
     background-image:url(bkg.png);
     color:white;
-    line-height:1.9 ;
-    flex-direction:column;
+    line-height:1.9;
     font-family:'JetBrains Mono Nerd';
-    
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align:middle
   }
   
   .centered-content /*this contains the border stuff*/ {
     border: 1.2px solid white;
     padding: 20px; 
-    border-radius: 1rem;
-    display:flex;
+    border-radius: 0.5rem;
     width:80%;
+    height:80%;
     flex-direction:column;
-    -webkit-backdrop-filter: blur(10px) saturate(180%);
-    backdrop-filter: blur(10px) saturate(180%);
-    background-color: rgba(0, 0, 0, 0.634);
+    -webkit-backdrop-filter: blur(5px) saturate(180%);
+    backdrop-filter: blur(5px) saturate(180%);
+    background-color: rgba(0, 0, 0, 0.54);
   }
   @media screen and (orientation:portrait) { /*mobile detector:mid edition. ONLY using orientation rn*/
     body {
@@ -38,6 +39,9 @@ body, html {
   a {/* these a css thingies set the hyperlinks to not use purple or blue coloring*/
     color: white;
     text-decoration: none;
+    vertical-align:middle;
+    font-size:180%;
+    word-spacing: 80%;
   }
   
   a:visited { /* these a css thingies set the hyperlinks to not use purple or blue coloring*/

@@ -15,10 +15,7 @@ body, html {
     line-height:1.9;
     font-family:'JetBrains Mono Nerd';
     background-position: center;
-    background-repeat: no-repeat;
-    vertical-align:middle
-    background-size:cover;
-    background-attachment:scroll
+    vertical-align:middle;
   }
   
   .centered-content /*this contains the border stuff*/ {
@@ -53,7 +50,6 @@ body, html {
   a:hover {/*this sets the hover color for hyperlinks bc why not?*/
     color:lightgray;
   }
-}
 
 
 

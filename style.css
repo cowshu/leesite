@@ -15,15 +15,19 @@ body, html {
     line-height:1.9 ;
     flex-direction:column;
     font-family:'JetBrains Mono Nerd';
+    
   }
   
   .centered-content /*this contains the border stuff*/ {
-    border: 1px solid white;
+    border: 1.2px solid white;
     padding: 20px; 
-    background-color:black;
+    border-radius: 1rem;
     display:flex;
     width:80%;
     flex-direction:column;
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    backdrop-filter: blur(10px) saturate(180%);
+    background-color: rgba(0, 0, 0, 0.634);
   }
   @media screen and (orientation:portrait) { /*mobile detector:mid edition. ONLY using orientation rn*/
     body {

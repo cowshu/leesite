@@ -34,7 +34,6 @@ body, html {
   a {/* these a css thingies set the hyperlinks to not use purple or blue coloring*/
     color: white;
     text-decoration: none;
-    font-size:180%;
     word-spacing: 80%;
   }
   

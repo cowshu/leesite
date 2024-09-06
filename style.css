@@ -17,6 +17,7 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     vertical-align:middle
+    background-size:cover;
   }
   
   .centered-content /*this contains the border stuff*/ {

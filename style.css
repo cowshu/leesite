@@ -15,15 +15,8 @@ body, html {
     line-height:1.9;
     font-family:'JetBrains Mono Nerd';
     background-position: center;
-<<<<<<< HEAD
-    background-repeat: no-repeat;
-    vertical-align:middle
-    background-size:cover;
-    background-attachment:scroll
-=======
     vertical-align:middle;
     clear:both;
->>>>>>> c8f1ad8 (	modified:   index.html)
   }
   
   .centered-content /*this contains the border stuff*/ {

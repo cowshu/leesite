@@ -15,13 +15,19 @@ body, html {
     line-height:1.9;
     font-family:'JetBrains Mono Nerd';
     background-position: center;
+<<<<<<< HEAD
     background-repeat: no-repeat;
     vertical-align:middle
     background-size:cover;
     background-attachment:scroll
+=======
+    vertical-align:middle;
+    clear:both;
+>>>>>>> c8f1ad8 (	modified:   index.html)
   }
   
   .centered-content /*this contains the border stuff*/ {
+    vertical-align:middle;
     border: 1.2px solid white;
     padding: 20px; 
     border-radius: 0.5rem;
@@ -40,7 +46,6 @@ body, html {
   a {/* these a css thingies set the hyperlinks to not use purple or blue coloring*/
     color: white;
     text-decoration: none;
-    vertical-align:middle;
     font-size:180%;
     word-spacing: 80%;
   }
@@ -53,8 +58,11 @@ body, html {
   }
 }
 
-
-
+  .col-2 {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
     
 
 

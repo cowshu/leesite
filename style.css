@@ -18,7 +18,7 @@ body, html {
     background-repeat: no-repeat;
     vertical-align:middle
     background-size:cover;
-    background-attachment:scroll;
+    background-attachment:scroll
   }
   
   .centered-content /*this contains the border stuff*/ {
@@ -35,6 +35,7 @@ body, html {
   @media screen and (orientation:portrait) { /*mobile detector:mid edition. ONLY using orientation rn*/
     body {
       font-size:110%;
+      scale:120%;
     }
 }
 
@@ -52,8 +53,7 @@ body, html {
   a:hover {/*this sets the hover color for hyperlinks bc why not?*/
     color:lightgray;
   }
-
-
+}
 
 
 

@@ -4,7 +4,6 @@
   src: url('JetBrainsMonoNerdFont-Medium.ttf');
 }
 body, html {
-    display: flex;
     
     background-image:url(bkg.png);
     color:white;
@@ -15,14 +14,15 @@ body, html {
   }
   
   .centered-content /*this contains the border stuff*/ {
-       
     border: 1.2px solid white;
     padding:20px;
     border-radius: 0.5rem;
     -webkit-backdrop-filter: blur(5px) saturate(180%);
     backdrop-filter: blur(5px) saturate(180%);  /*defines blur*/
     background-color: rgba(0, 0, 0, 0.54);
-
+    width:fit-content;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   a {/* these a css thingies set the hyperlinks to not use purple or blue coloring*/
@@ -46,11 +46,8 @@ body, html {
     height:fit-content;
   }
 
-@media only screen and (orientation:landscape) {
-  .wrapper {
-    overflow-x: none;
-    width:100%;
-    height:fit-content;
-    overflow:scroll;
-  }
+  @media only screen and (orientation:landscape) {
+    .centered-content{
+      width:30em;
+    }
 }

@@ -8,7 +8,6 @@
   <link href="style.css" rel="stylesheet" type="text/css"> <!--sets the page's css file-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"> <!--gets my favorite font (jetbrains mono) from g fonts and lets it be referenced in the CSS-->
   <meta name="viewport" content="width=device-width">
-  
 </head>
 <body>
   <div class="centered-content" style=margin-bottom:10px;>
@@ -22,9 +21,9 @@
       <br>[romnc]: demiromantic
       <br>[silly]: autism, adhd, anxiety, depression
       <br>[age]: 17
-      <br>[inter]: tech, linux, boys, hardware hacking, photography, cats
-      <br>[music]: femtanyl, LOOK MUM NO COMPUTER, HEALTH, battle tapes
-      <br> <i class="fa-brands fa-steam"></i>
+      <br>[inter]: tech,<span id="dots">...</span><span id="more">linux, boys, hardware hacking, photography, cats</span>
+      <button onclick="myFunction()" id="myBtn">Read more</button>
+      <br>
       <br>
         <b>discord:</b> @cowshu
       <br> <!--taking a gander at my bad code?-->
@@ -34,6 +33,23 @@
       <a style="align-self:center; align-items:center;" href="https://www.last.fm/user/cowshu"><img src="https://lastfm-recently-played.vercel.app/api?user=cowshu" height=auto width=auto/></a>
       </p>
       <script src="oneko.js"></script>
+      <script>
+        function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+} 
+      </script>
     </div>
     
 

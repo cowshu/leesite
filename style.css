@@ -13,18 +13,56 @@ body, html {
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
+
+  fieldset {
+  	border: 1px solid gray;
+  	
+  }
+  fieldset:hover {
+  	border: 1px solid white;
+  }
   
-  .centered-content /*this contains the border stuff*/ {
-    border: 1.2px solid white;
-    padding:20px;
-    border-radius: 0.5rem;
-    -webkit-backdrop-filter: blur(5px) saturate(180%);
-    backdrop-filter: blur(5px) saturate(180%);  /*defines blur*/
-    background-color: rgba(0, 0, 0, 0.54);
-    width:fit-content;
+  .mainx /*this contains the border stuff*/ {
+    padding:10px;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 1);
+    width:95%;
     margin-left: auto;
     margin-right: auto;
+    align-self: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top:0px;
+    grid-column: 1 / 3;
   }
+
+  .music {
+  	padding:10px;
+  	border-radius: 0;
+  	background-color: rgba(0, 0, 0, 1);
+  	padding-top:0px;
+  	width:fit-content;
+  	height: 100;
+  	align-self: center;
+  }
+
+  .links {
+  	padding:10px;
+  	border-radius: 0;
+  	background-color: rgba(0, 0, 0, 1);
+  	padding-top:0px;
+  	height:fit-content;
+  	grid-column: 1 / 4;
+  }
+
+  .header {
+    	padding:10px;
+    	border-radius: 0;
+    	background-color: rgba(0, 0, 0, 1);
+    	padding-top:0px;
+    	height:fit-content;
+    	grid-column: 1 / 4;
+    }
 
   a {/* these a css thingies set the hyperlinks to not use purple or blue coloring*/
     color: white;
@@ -45,11 +83,25 @@ body, html {
     overflow-x: scroll;
     width:100%;
     height:fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
   }
 
   @media only screen and (orientation:landscape) {
-    .centered-content{
-      width:30em;
+    
+}
+
+@media only screen and (orientation:portrait) {
+    .mainx {
+    	grid-row: 3;
+    }
+    .music {
+    	grid-row: 4;
+    }
+    .links {
+    	grid-row: 2;
     }
 }
 

@@ -102,8 +102,31 @@
 <div class="music">
  <fieldset>
  <legend>Music</legend>
-  <a style="align-self:center; align-items:center;" href="https://www.last.fm/user/cowshu"><img src="https://lastfm-recently-played.vercel.app/api?user=cowshu" height=auto width=300rem/></a>
-  
+      <div id="lastfm-widget">
+          <div id="widget"><img src=https://media.tenor.com/fuu6MHcsfEMAAAAi/toons-music.gif width="20" height="25"></img> <span id="song">&#8987;</span></div>
+		  <img id="nowPlayingImage" src="" alt="Now Playing Track">
+		  <script>
+			  // Use the variable to update the `src` of the image
+	        document.getElementById("nowPlayingImage").src = largeImageUrl;
+		  </script>
+          <div>
+              <p><small>latest played song on <a href="http://last.fm" target="_blank">last.fm</a></small></p>
+              <p><small>powered by <a href="https://github.com/biancarosa/lastfm-last-played"
+                          target="_blank">@biancarosa/lastfm-last-played</a></small></p>
+    		  <img src="" id="largeImageUrl"></img>
+          </div>
+      </div>
+      <script type="text/javascript">
+          let user = 'cowshu';
+          let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
+          let song = document.querySelector('#song');
+          fetch(url)
+              .then(function (response) {
+                  return response.json()
+              }).then(function (json) {
+                  song.innerHTML = json['track']['name'] + ' - ' + json['track']['artist']['#text'];
+              });
+      </script>
  </fieldset>
 </div>
 <div class="links">

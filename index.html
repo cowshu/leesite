@@ -102,31 +102,50 @@
 <div class="music">
  <fieldset>
  <legend>Music</legend>
-      <div id="lastfm-widget">
-          <div id="widget"><img src=https://media.tenor.com/fuu6MHcsfEMAAAAi/toons-music.gif width="20" height="25"></img> <span id="song">&#8987;</span></div>
-		  <img id="nowPlayingImage" src="" alt="Now Playing Track">
-		  <script>
-			  // Use the variable to update the `src` of the image
-	        document.getElementById("nowPlayingImage").src = largeImageUrl;
-		  </script>
-          <div>
-              <p><small>latest played song on <a href="http://last.fm" target="_blank">last.fm</a></small></p>
-              <p><small>powered by <a href="https://github.com/biancarosa/lastfm-last-played"
-                          target="_blank">@biancarosa/lastfm-last-played</a></small></p>
-    		  <img src="" id="largeImageUrl"></img>
-          </div>
-      </div>
-      <script type="text/javascript">
-          let user = 'cowshu';
-          let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
-          let song = document.querySelector('#song');
-          fetch(url)
-              .then(function (response) {
-                  return response.json()
-              }).then(function (json) {
-                  song.innerHTML = json['track']['name'] + ' - ' + json['track']['artist']['#text'];
-              });
-      </script>
+   <img src="placeholder.jpg" alt="Album Art" id="albumArt" class="album-art">
+               <div class="song-info">
+                   <p><strong>Track:</strong> <span id="track">--</span></p>
+                   <p><strong>Artist:</strong> <span id="artist">--</span></p>
+                   <p><strong>Album:</strong> <span id="album">--</span></p>
+                   <p><a href="#" target="_blank" id="trackUrl">Listen on Last.fm</a></p>
+               </div>
+     <script>
+     async function fetchNowPlaying() {
+                 const user = 'cowshu'; // Replace with your Last.fm username
+                 const url = `https://lastfm-last-played.biancarosa.com.br/${user}/latest-song`;
+     
+                 try {
+                     const response = await fetch(url);
+                     const data = await response.json();
+     
+                     const track = data.track.name || 'Unknown';
+                     const artist = data.track.artist['#text'] || 'Unknown';
+                     const album = data.track.album['#text'] || 'Unknown';
+                     const albumArt = data.track.image.find(img => img.size === 'large')['#text'] || 'placeholder.jpg';
+                     const trackUrl = data.track.url || '#';
+     
+                     document.getElementById('track').textContent = track;
+                     document.getElementById('artist').textContent = artist;
+                     document.getElementById('album').textContent = album;
+                     document.getElementById('albumArt').src = albumArt;
+                     document.getElementById('trackUrl').href = trackUrl;
+                 } catch (error) {
+                     console.error('Error fetching now playing data:', error);
+                     document.getElementById('track').textContent = 'Error fetching data';
+                 }
+             }
+     		setInterval(fetchNowPlaying, 10000);
+     		fetchNowPlaying();
+             // Media Control Actions
+             async function controlMedia(action) {
+                 await fetch(`/media/${action}`);
+                 fetchNowPlaying();
+             }
+     
+             // Update Stats and Now Playing Data Periodically
+             setInterval(fetchNowPlaying, 10000);
+             fetchNowPlaying();
+    </script>
  </fieldset>
 </div>
 <div class="links">

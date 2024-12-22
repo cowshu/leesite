@@ -7,7 +7,18 @@
   <link rel="icon" type="image/x-icon" href="favicon.jpg"> <!--sets favicon-->
   <link href="style.css" rel="stylesheet" type="text/css"> <!--sets the page's css file-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"> <!--gets my favorite font (jetbrains mono) from g fonts and lets it be referenced in the CSS-->
-  <meta name="viewport" content="width=device-width"> <!--i didnt realize i needed this until now. saved me a headache. fixes mobile views-->
+  <meta name="viewport" content="width=device-width">
+  <style>
+     .hyper {
+       padding: 10px;
+       border-radius: 0;
+       background-color: rgba(0, 0, 0, 1);
+       padding-top: 0px;
+       grid-column: 1 / 4;
+       grid-row: 5;
+       height: fit-content;
+     }
+   </style> <!--i didnt realize i needed this until now. saved me a headache. fixes mobile views-->
 </head>
 <body>
 <div class="wrapper">
@@ -152,6 +163,41 @@
  <fieldset>
  <legend>Links</legend>
    <br><a href="https://tumblr.com/cowshu">tumblr </a>  <a href="https://steamcommunity.com/profiles/76561198837931789/">steam </a>  <a href="https://github.com/cowshu">github </a>  <a href="https://discord.gg/Dnn9qRxTFz">discord </a>  <a href="https://bsky.app/profile/leeshu.xyz">bluesky</a> 
+ </fieldset>
+</div>
+
+<div class="hyper">
+ <fieldset>
+ <legend>Hyperfixations</legend>
+      <div id="hyperfixations"></div>
+    
+      <script>
+        async function loadHyperfixations() {
+          try {
+            const response = await fetch('hyperfixations.json');
+            const data = await response.json();
+    
+            const container = document.getElementById('hyperfixations');
+            container.innerHTML = ''; // Clear old content
+    
+            data.forEach(item => {
+              const fixDiv = document.createElement('div');
+              fixDiv.classList.add('hyperfixation');
+              fixDiv.innerHTML = `
+                <div class="type">Type: ${item.type}</div>
+                <div class="name">${item.name}</div>
+                <div class="description">${item.description}</div>
+                <div class="date">Updated: ${item.date}</div>
+              `;
+              container.appendChild(fixDiv);
+            });
+          } catch (error) {
+            console.error('Error loading hyperfixations:', error);
+          }
+        }
+    
+        loadHyperfixations();
+      </script>
  </fieldset>
 </div>
 </div>

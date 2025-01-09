@@ -1,8 +1,14 @@
 [
   {
-    "type": "project",
-    "name": "working on site",
-    "description": "doing some coding on my site for fun",
-    "date": "2024-22-12"
+    "type": "responsibility",
+    "name": "job",
+    "description": "yes i am hyperfixated on my job, i enjoy it",
+    "date": "2025-01-09"
+  }
+  {
+    "type": "game",
+    "name": "Marvel Rivals",
+    "description": "i really like this game and im surprisingly good at it",
+    "date": "2025-01-09"
   }
 ]

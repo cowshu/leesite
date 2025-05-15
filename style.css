@@ -1,14 +1,14 @@
 
 @font-face {
-  font-family: 'JetBrains Mono Nerd';
-  src: url('JetBrainsMonoNerdFont-Medium.ttf');
+  font-family: 'DepartureMono';
+  src: url('DepartureMono.otf');
 }
 body, html {
     
     background-image:url(bkg.jpg);
     color:white;
     line-height:1.9;
-    font-family:'JetBrains Mono Nerd';
+    font-family:'DepartureMono';
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;

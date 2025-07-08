@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'DepartureMono' !important;
+  src: url('DepartureMono.otf');
+}
+body, html {
+    
+    background-image:url(bkg.jpg);
+    color:white;
+    line-height:1.9;
+    font-family:'DepartureMono';
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    overflow-x: scroll;
+    width:100%;
+    height:fit-content;
+  }
+  .window-body {
+
+  }
+  a {/* these a css thingies set the hyperlinks to not use purple or blue coloring*/
+    color: white;
+    text-decoration: none;
+    word-spacing: 80%;
+  }
+  
+  a:visited { /* these a css thingies set the hyperlinks to not use purple or blue coloring*/
+   /* color:white; */
+    font-style: none; }
+  a:hover {/*this sets the hover color for hyperlinks bc why not?*/
+    color:lightgray;
+  }
+    
+  #more {display: none;}
+
+#scroll-container {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width:100%;
+}
+
+#scroll-text {
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}

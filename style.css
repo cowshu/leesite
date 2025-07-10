@@ -34,7 +34,7 @@ body, html {
     margin-bottom: auto;
     padding-top:0px;
     grid-column: 1 / 3;
-    grid-row: 3;
+    grid-row: 2;
   }
 
   .music {
@@ -45,10 +45,10 @@ body, html {
   	height: 100;
   	align-self: center;
   	grid-column: 2.5 / 3;
-  	grid-row: 3;
+  	grid-row: 2;
   }
 
-  .links {
+  /*.links {
   	padding:10px;
   	border-radius: 0;
   	background-color: rgba(0, 0, 0, 1);
@@ -57,7 +57,7 @@ body, html {
   	grid-column: 1 / 4;
   	grid-row: 2;
    
-  }
+  }*/
 
   .header {
     	padding:10px;
@@ -67,32 +67,23 @@ body, html {
     	height:fit-content;
     	grid-column: 1 / 4;
   }
-  .badges {
+  /*.badges {
       padding:10px;
       border-radius: 0;
       background-color: rgba(0, 0, 0, 1);
       padding-top:0px;
       grid-column: 1 / 4;
       grid-row: 5;
-  }
-  .specs {
-      padding:10px;
-      border-radius: 0;
-      background-color: rgba(0, 0, 0, 1);
-      padding-top:0px;
-      grid-column: 1 / 4;
-      grid-row: 6;
-  }
+  }*/
 
   a {/* these a css thingies set the hyperlinks to not use purple or blue coloring*/
     color: white;
-    text-decoration: none;
-    word-spacing: 80%;
+
   }
   
   a:visited { /* these a css thingies set the hyperlinks to not use purple or blue coloring*/
    /* color:white; */
-    font-style: none; }
+    }
   a:hover {/*this sets the hover color for hyperlinks bc why not?*/
     color:lightgray;
   }
@@ -115,18 +106,13 @@ body, html {
 
 @media only screen and (orientation:portrait) {
     .mainx {
-    	grid-row: 3;
+    	grid-row: 2;
     	grid-column: 1/4;
     }
     .music {
-    	grid-row: 4;
+    	grid-row: 3;
     	grid-column: 1/4;
     }
-    .links {
-    	grid-row: 2;
-    	
-    }
-
 }
 
 #scroll-container {

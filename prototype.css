@@ -22,9 +22,9 @@ body, html {
     height:fit-content;
   }
   @media only screen and (max-width: 600px) and (orientation: portrait) {
-    .links  { grid-row: 3; grid-column: 1/4; }
-    .info   { grid-row: 4; grid-column: 1/4; }
-    .music  { grid-row: 5; grid-column: 1/4; height: fit-content; }
+    .links  { grid-row: 3 !important; grid-column: 1/4 !important; }
+    .info   { grid-row: 4 !important; grid-column: 1/4 !important; }
+    .music  { grid-row: 5 !important; grid-column: 1/4 !important; height: fit-content !important; }
   }
 
 

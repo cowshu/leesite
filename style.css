@@ -67,14 +67,14 @@ body, html {
     	height:fit-content;
     	grid-column: 1 / 4;
   }
-  /*.badges {
+  .badges {
       padding:10px;
       border-radius: 0;
       background-color: rgba(0, 0, 0, 1);
       padding-top:0px;
       grid-column: 1 / 4;
-      grid-row: 5;
-  }*/
+      grid-row: 4;
+  }
 
   a {/* these a css thingies set the hyperlinks to not use purple or blue coloring*/
     color: white;

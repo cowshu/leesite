@@ -21,8 +21,8 @@
       <p><a href="https://www.pcrf.net/" style="font-size: 120%">[FREE PALESTINE] </a> <a href="https://arab.org/click-to-help/palestine/" style="font-size: 120%">[Do your clicks]</a>
       <br>
       <br><a href="https://wetdry.world/@leexyz">[wetdry.world] </a> <a href="https://steamcommunity.com/id/leeisonline/">[steam] </a>  <a href="https://github.com/cowshu">[github] </a>
-   <br> Reach me on Discord! (i love attention): @lizzieonl1ne
-   <br><div id="scroll-container"><div id="scroll-text">someone take me back to the 2010s</div></div>
+   <br> Add. Discord. Ples: @lizzieonl1ne
+   <br><div id="scroll-container"><div id="scroll-text">mommy im scared take me back to 192.168.1.0/24</div></div>
    <br><a href="https://github.com/cowshu/leesite">source code </a>
    </fieldset>
   </div>
@@ -31,7 +31,7 @@
       <fieldset>
  	  <legend>Main</legend>
           <br>hello and welcome to my fuckass webbed site
-          <br><b>my name(s):</b> liz/lizzie
+          <br><b>my name(s):</b> ashe/liz/lizzie
           <br><b>my age:</b> 19
           <br><b>my pronouns:</b> she/they
           <br><b>my gender:</b> fluid (enby/fem)
@@ -49,51 +49,51 @@
 
 <div class="music">
  <fieldset>
- <legend>Music</legend>
-   <img src="placeholder.jpg" alt="Album Art" id="albumArt" class="album-art">
+ <legend>now listening:</legend>
+   <img src="placeholder.jpg" alt="FUCKING ART MISSING" id="albumArt" class="album-art">
                <div class="song-info">
-                   <p><strong>Track:</strong> <span id="track">--</span></p>
-                   <p><strong>Artist:</strong> <span id="artist">--</span></p>
-                   <p><strong>Album:</strong> <span id="album">--</span></p>
-                   <p><a href="#" target="_blank" id="trackUrl">Listen on Last.fm</a></p>
+                   <p><strong>songname |</strong> <span id="track">idk lol</span></p>
+                   <p><strong>artist |</strong> <span id="artist">idk lol</span></p>
+                   <p><strong>album |</strong> <span id="album">idk lol</span></p>
+                   <p><a href="#" target="_blank" id="trackUrl">go to the peak ></a></p>
                </div>
      <script>
-     async function fetchNowPlaying() {
-                 const user = 'cowshu'; // Replace with your Last.fm username
-                 const url = `https://lastfm-last-played.biancarosa.com.br/${user}/latest-song`;
-     
-                 try {
-                     const response = await fetch(url);
-                     const data = await response.json();
-     
-                     const track = data.track.name || 'Unknown';
-                     const artist = data.track.artist['#text'] || 'Unknown';
-                     const album = data.track.album['#text'] || 'Unknown';
-                     const albumArt = data.track.image.find(img => img.size === 'large')['#text'] || 'placeholder.jpg';
-                     const trackUrl = data.track.url || '#';
-     
-                     document.getElementById('track').textContent = track;
-                     document.getElementById('artist').textContent = artist;
-                     document.getElementById('album').textContent = album;
-                     document.getElementById('albumArt').src = albumArt;
-                     document.getElementById('trackUrl').href = trackUrl;
-                 } catch (error) {
-                     console.error('Error fetching now playing data:', error);
-                     document.getElementById('track').textContent = 'Error fetching data';
-                 }
-             }
-     		setInterval(fetchNowPlaying, 10000);
-     		fetchNowPlaying();
-             // Media Control Actions
-             async function controlMedia(action) {
-                 await fetch(`/media/${action}`);
-                 fetchNowPlaying();
-             }
-     
-             // Update Stats and Now Playing Data Periodically
-             setInterval(fetchNowPlaying, 10000);
-             fetchNowPlaying();
-    </script>
+const LASTFM_API_KEY = 'e00692134aefc1abf2643ef7b90fc8ce'; // i know. but please dont
+const LASTFM_USER = 'cowshu';
+
+async function fetchNowPlaying() {
+    const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${LASTFM_USER}&api_key=${LASTFM_API_KEY}&format=json&limit=1`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        const track = Array.isArray(data.recenttracks.track)
+            ? data.recenttracks.track[0]
+            : data.recenttracks.track;
+
+        const trackName = track.name || 'idk lol';
+        const artistName = track.artist['#text'] || track.artist.name || 'idk lol';
+        const albumName = track.album['#text'] || 'idk lol';
+        const trackUrl = track.url || '#';
+
+        const albumArt = track.image.find(img => img.size === 'large')['#text'] || 'placeholder.jpg';
+
+        document.getElementById('track').textContent = trackName;
+        document.getElementById('artist').textContent = artistName;
+        document.getElementById('album').textContent = albumName;
+        document.getElementById('albumArt').src = albumArt;
+        document.getElementById('trackUrl').href = trackUrl;
+
+    } catch (error) {
+        console.error('could not fetch :(', error);
+        document.getElementById('track').textContent = 'error loading track';
+    }
+}
+
+setInterval(fetchNowPlaying, 10000);
+fetchNowPlaying();
+</script>
  </fieldset>
 </div>
 <div class="badges">
